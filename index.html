@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="source/stylesheet1.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet1.css">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
     <head>
             <script type="text/javascript"> //Moving test in title
-                msg = " < miikey.pw > ";
-                msg = " < miikey.pw > " + msg;position = 0;
+                msg = " Mikey <>";
+                msg = " Welcome <>" + msg;position = 0;
                 function scrolltitle() {
                 document.title = msg.substring(position, msg.length) + msg.substring(0, position); position++;
                 if (position > msg.length) position = 0
@@ -14,24 +15,13 @@
                 scrolltitle();
             </script>  
     </head>
-    <body>
-        <div class="loader">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-            <div class="bar4"></div>
-            <div class="bar5"></div>
-            <div class="bar6"></div>
-        </div>
-            <audio autoplay loop id="player"> 
-                    <source src="./Music/music.wav" type="audio/mpeg"> 
-                        <script> 
-                        var audio = document.currentScript.parentElement; //Background music
-                        audio.volume = 0.3;
-                        </script>
-                </audio>
-        <video autoplay muted loop id="myVideo">
-                <source src="https://leveled.xyz/source/other/mp4.mp4" type="video/mp4">
-            </video>
-    </body>
+    
+    <h1>
+      <em>M</em>
+      <em class="planet left">I</em>
+      <em>K</em>
+      <em class="planet right">E</em>
+      <em>Y</em>
+    </h1>
+    
 </html>

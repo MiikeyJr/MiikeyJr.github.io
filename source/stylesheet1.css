@@ -1,134 +1,55 @@
-body{
-  background:#282828;
+$color: #fd7000;
+$size: 12px;
+$time: 1;
+
+main {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background:  #090707;
 }
 
-#global{
-  width:70px;
-  margin:auto;
-  margin-top:35vh;
-  position:relative;
-  cursor:pointer;
-  height:60px;
+.dank-ass-loader {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+   .row {
+      display: flex;
+   }
 }
 
-.mask{
-  position:absolute;
-  border-radius:2px;
-  overflow:hidden;
-   perspective: 1000;
-  backface-visibility: hidden;
+.arrow {
+   width: 0; 
+   height: 0;
+   margin: 0 (-$size / 2);
+   border-left: $size solid transparent;
+   border-right: $size solid transparent;
+   border-bottom: ($size * 1.8) solid $color;
+   animation: blink $time + s infinite;
+   filter: drop-shadow(0 0 ($size * 1.5) $color);
+    
+   &.down {
+      transform: rotate(180deg);
+   }
+   
+   @for $i from 1 through 18 {
+      &.outer-#{$i} {
+         animation-delay: -($time / 18) * $i + s;
+      }  
+   }
+
+   @for $i from 1 through 6 {
+      &.inner-#{$i} {
+         animation-delay: -($time / 6) * $i + s;
+      }  
+   }  
 }
 
-.plane{
-  background:#ffffff;
-  width:400%;
-  height:100%;
-  position:absolute;
-  transform : translate3d(0px,0,0);
-  /*transition: all 0.8s ease; */
-  z-index:100;
-  perspective: 1000;
-  backface-visibility: hidden;
-  
-}
- 
-.animation{
-  transition: all 0.3s ease;
-}
-
-
- 
-#top .plane{
-  z-index:2000;
-  animation : trans1 1.3s ease-in infinite  0s backwards;
-}
-#middle .plane{
-  transform : translate3d(0px,0,0);  
-  background : #bbbbbb;
-  animation : trans2 1.3s linear infinite  0.3s  backwards;
-
-}
-#bottom .plane{
-  z-index:2000;
-  animation : trans3 1.3s ease-out infinite  0.7s backwards;
-}
-
-
-
-#top{
-  width:53px;
-  height:20px;
-  left:20px;
-  transform: skew(-15deg, 0);
-  z-index:100;
-}
-
-#middle{
-  width:33px;
-  height:20px;
-  left:20px;
-  top:15px;
-  
-  transform: skew(-15deg, 40deg)
-}
-#bottom{
-  width:53px;
-  height:20px;
-  top:30px;  
-  transform: skew(-15deg, 0)
-}
-
-p{
-  color:#fff;
-  position:absolute;
-  left: -3px;
-  top:45px;
-  font-family:Arial;
-  text-align:center;
-  font-size:10px;
-}
-
-@keyframes trans1{ 
-  from { 
-    transform : translate3d(53px,0,0)
-  }
-  to { 
-    transform : translate3d(-250px,0,0)
-  }
-}
-
-@keyframes trans2{ 
-  from { 
-    transform : translate3d(-160px,0,0)
-  }
-  to { 
-    transform : translate3d(53px,0,0)
-  }
-}
-
-@keyframes trans3{ 
-  from { 
-    transform : translate3d(53px,0,0)
-  }
-  to { 
-    transform : translate3d(-220px,0,0)
-  }
-}
-
-@keyframes animColor{ 
-  from { 
-    background : red;
-  }
-  25%{
-    background : yellow;
-  }
-  50%{
-    background : green;
-  }
-  75%{
-    background : brown;
-  }
-  to { 
-    background : blue;
-  }
+@keyframes blink {
+  0% { opacity: 0.1; }
+  30% { opacity: 1; }
+  100% { opacity: 0.1; }
 }

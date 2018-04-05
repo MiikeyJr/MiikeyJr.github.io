@@ -1,43 +1,11 @@
 <!DOCTYPE html>
 <html>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="stylesheet1.css">
     <head>
-        <title>Hello <> Michael <> Welcome <> Back</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
-        <link rel="shortcut icon" href="./Images/icon2.png"/>
-        
-        <script>
-                function startTime() { //Time and Date
-                    var today = new Date();
-                    var h = today.getHours();
-                    var m = today.getMinutes();
-                    var s = today.getSeconds();
-                    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat'];
-                    var dayName = days[today.getDay()];
-                    m = checkTime(m);
-                    s = checkTime(s);
-                    function fgex() {
-                        if (h>=12) {
-                            return {hours: (h - 12), ampm: "PM"};
-                        } else {
-                             return {hours: h, ampm: "AM"};
-                        }
-                    }
-                    document.getElementById('time').innerHTML = fgex().hours + ":" + m + ":" + s + " " + fgex().ampm;
-                    document.getElementById('date').innerHTML = dayName + " " + today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
-                    var t = setTimeout(startTime, 500);
-                }
-                function checkTime(i) {
-                    if (i < 10) {i = "0" + i}; 
-                    return i;
-                }
-            </script>
-        <script type="text/javascript"> //Moving test in title
-                msg = " Hello <>";
-                msg = " Michael <> Welcome <> Back <>" + msg;position = 0;
+            <script type="text/javascript"> //Moving test in title
+                msg = " Mikey <>";
+                msg = " Welcome <>" + msg;position = 0;
                 function scrolltitle() {
                 document.title = msg.substring(position, msg.length) + msg.substring(0, position); position++;
                 if (position > msg.length) position = 0
@@ -47,38 +15,15 @@
             </script>  
     </head>
     <body>
-        <audio autoplay loop id="player"> 
-                <source src="./music/music1.mp3" type="audio/mpeg"> 
-                    <script> 
-                    var audio = document.currentScript.parentElement; //Background music
-                    audio.volume = 0.2;
-                    </script>
-            </audio>
-        <body onload="startTime()">
-            <div class="date1">
-                <div id="date"></div>
-            </div>
-
-            <div class="time1">
-                <div id="time"></div>
-            </div>
-
-            <div class="smallbox">
-                <div class="bigbox">
-            <center>
-                <h1>MICHAEL</h1>
-            </center>
-                <form>
-                    <input class="MyButton" type="button" value="Home Page" onclick="window.location.href='homepage.html'"/>
-                </form>
-                </div>
-            </div>
-      </body>
-
-        <div class="vertical1"></div>
-        <div class="vertical2"></div>
-        <div class="horizontal1"></div>
-        <div class="horizontal2"></div>
-         
+            <audio autoplay loop id="player"> 
+                    <source src="./Music/music.wav" type="audio/mpeg"> 
+                        <script> 
+                        var audio = document.currentScript.parentElement; //Background music
+                        audio.volume = 0.3;
+                        </script>
+                </audio>
+        <video autoplay muted loop id="myVideo">
+                <source src="./Music/mp4.mp4" type="video/mp4">
+            </video>
     </body>
 </html>

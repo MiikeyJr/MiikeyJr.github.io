@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="stylesheet1.css">
+    <head>
+            <script type="text/javascript"> //Moving test in title
+                msg = " Mikey <>";
+                msg = " Welcome <>" + msg;position = 0;
+                function scrolltitle() {
+                document.title = msg.substring(position, msg.length) + msg.substring(0, position); position++;
+                if (position > msg.length) position = 0
+                window.setTimeout("scrolltitle()",190);
+                }
+                scrolltitle();
+            </script>  
+    </head>
+    <body>
+        <audio autoplay="" loop="" id="player"> 
+                <source src="./music/music1.mp3" type="./Music/music.mp3"> 
+                    <script> 
+                    var audio = document.currentScript.parentElement; //Background music
+                    audio.volume = 0.4;
+                    </script>
+                </audio>
+        <video autoplay muted loop id="myVideo">
+                <source src="./Music/mp4.mp4" type="video/mp4">
+            </video>
+    </body>
+</html>

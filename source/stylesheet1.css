@@ -1,2 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Yatra+One');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Sarpanch');
+@import url('https://fonts.googleapis.com/css?family=Tillana');
+@import url('https://fonts.googleapis.com/css?family=Passero+One');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Hairline');
+@import url('https://fonts.googleapis.com/css?family=Aubrey');
+@import url('https://fonts.googleapis.com/css?family=Cute+Font');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+@import url('https://fonts.googleapis.com/css?family=Changa');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+
+
+body { 
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5) ), url("./Images/space.jpg");
+    text-align: center;
+    position: relative;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Changa', sans-serif;
+    color: white;
+    font-size:25pt;
+    border-radius: 5px;
+    width: 63.5%;
+    border-width: 50%; 
+    letter-spacing: 5px; 
+    padding-bottom: 15px;
+    padding-top: 100px;
+}
+
+input.MyButton {
+    width: 300px;
+    padding: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 150%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 0px;
+    border-radius: 0px;
+    font-family: 'Bungee Hairline', cursive;
+    border: 2px solid white;
+    letter-spacing: 7px;
+}
+
+input.MyButton:hover {
+    color: black;
+    font-weight: bold;
+    background: rgba(57, 167, 214, 0.1);
+    
+}
+
+.smallbox {
+    padding-top: 27vh;
+    width:100%;
+    align-content: center;
+    padding-right: 600px;
+    padding-left: 600px;  
+}
+
+.bigbox {
+    background-image: url("./Images/forest2.jpg");
+    background-size:cover;
+    padding-bottom: 150px;
+    padding-top: 5px;
+}
+
+#time {
+    font-family: 'Bungee Hairline', cursive;
+    color: white;
+    text-align: center;
+    display:inline-block;
+    letter-spacing: 5px;
+    font-size: 115%;
+    font-weight: bold;
+    border: 3px solid white;
+    padding: 50px; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    width: 25%;
+}
+
+#date {
+    font-family: 'Bungee Hairline', cursive;
+    color: white;
+    text-align: center;
+    display:inline-block;
+    letter-spacing: 5px;
+    font-size: 115%;
+    font-weight: bold;
+    border: 3px solid white;
+    padding: 50px; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    width: 25%;
+}
+
+.time1 {
+    width:100%;
+    align-content:center;
+    position: absolute;
+    top:70vh;
+    padding-left:485px;
+}
+
+.date1 {
+    width:100%;
+    align-content:center;
+    position:absolute;
+    top:22vh;
+    padding-right: 455px;
+}
+
+.vertical1 {
+    transform: rotate(90deg) translateY(-415px) translateX(-135px);
+    width: 350px;
+    border: 2px solid white;
+ }
+
+.vertical2 {
+    transform: rotate(90deg) translateY(-1155px) translateX(-290px);
+    width: 350px;
+    border: 2px solid white;
+ }
+
+.horizontal1{
+    transform: translateY(0px) translateX(520px);
+    width: 350px;
+    border: 2px solid white;
+}
+
+.horizontal2{
+    transform: translateY(-437px) translateX(1050px);
+    width: 350px;
+    border: 2px solid white;
+}
+
 
 
